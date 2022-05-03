@@ -11,14 +11,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+
 }
 
 body {
     font-family: 'Epilogue', sans-serif;
 }
 .container {
-    min-width: 375px;
+    max-width: 375px;
     padding-bottom: 5rem;
+}
+.hidden {
+    display: none;
 }
 /*===== nav =====*/
 nav {
@@ -29,9 +34,6 @@ nav {
     margin-bottom: 2rem;
 }
 
-.fontawe i {
-    font-size: 2.2rem;
-}
 
 /*===== main =====*/
 .main-logo {
@@ -58,12 +60,14 @@ p {
     margin: 0 auto;
 }
 .btn button {
-    padding: .5rem 1rem;
-    font-size: 1.1rem;
-    border-radius: 50px;
+    padding: .8rem 1.3rem;
+    font-size: 1rem;
+    border-radius: 10px;
     color: white;
     background-color: var(--Almost-Black);
     margin-bottom: 2.7rem;
+    border: none;
+    font-weight: 700;
 
 }
 
@@ -81,4 +85,29 @@ footer {
 }
 .icon img {
     width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        min-width: 1024px;
+    }
+    .hidden {
+        display: inline-block;
+    }
+    .main-logo img{
+        content: url(./images/image-hero-desktop.png);
+    }
+    /*====== nav ======*/
+    .header-logo {
+        display: flex;
+        gap: 1.4rem;
+    }
+    .fontawe img {
+        display: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+    }
 }
